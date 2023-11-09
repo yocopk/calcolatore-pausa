@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolatore Pausa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <h1 class="banner">CORSO FRONTEND DEVELOPER</h1>
+        <label for="input-time">Inserisci l'ora attuale (HH:MM):</label>
+        <input
+          class="text-input"
+          type="text"
+          id="input-time"
+          placeholder="Es. 12:00"
+        />
+
+        <button class="button" onclick="calculateTime()">VAI</button>
+
+        <h1>Inizio pausa: <span id="display-input-time">--:--</span></h1>
+        <h1>Fine pausa: <span id="display-future-time">--:--</span></h1>
+
+        <h3>Codice corso: 002PROTD2370317</h3>
+      </div>
+    </div>
+
+    <footer class="footer-container">
+      <div class="copyright-container">
+        <p class="copyright">&#169 2023 - ChatGPT - <a href="https://andreawebdev.netlify.app/" target="_blank">Andrea Marchese</a></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
