@@ -1,34 +1,25 @@
 function calculateTime() {
-  const inputTime = document.getElementById("input-time").value;
-  const [hours, minutes] = inputTime.split(":");
+  const breakLength = document.getElementById("select-break-length").value;
 
-  if (
-    hours &&
-    minutes &&
-    hours >= 0 &&
-    hours <= 23 &&
-    minutes >= 0 &&
-    minutes <= 59
-  ) {
-    const currentTime = new Date();
-    const futureTime = new Date(currentTime);
-    futureTime.setHours(parseInt(hours));
-    futureTime.setMinutes(parseInt(minutes) + 15);
-
-    const options = { hour: "numeric", minute: "numeric" };
-
-    document.getElementById("display-input-time").textContent = inputTime;
-    document.getElementById("display-future-time").textContent =
-      futureTime.toLocaleTimeString("it-IT", options);
-  } else {
-    alert("Inserisci un'ora valida nel formato HH:MM.");
+  const currentTime = new Date();
+  
+  
+// Non vogliamo farci rubare circa mezzo minuto dalla pausa
+// quindi arrotondiamo al minuto dopo (grazie Luca "Iagan" Carturan)
+  const secondsToRoundUp = 20;
+  if (currentTime.getSeconds() >= secondsToRoundUp) {
+    currentTime.setSeconds(currentTime.getSeconds() + secondsToRoundUp);
   }
+  const futureTime = new Date(currentTime);
+  futureTime.setMinutes(futureTime.getMinutes() + parseInt(breakLength));
+
+  const options = { hour: "numeric", minute: "numeric" };
+
+
+  document.getElementById("display-input-time").textContent =
+    currentTime.toLocaleTimeString("it-IT", options);
+  document.getElementById("display-future-time").textContent =
+    futureTime.toLocaleTimeString("it-IT", options);
 }
 
-const inputField = document.getElementById("input-time");
-inputField.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    calculateTime();
-  }
-});
 // Nino è stato qui
