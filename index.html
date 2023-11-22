@@ -10,13 +10,19 @@
     <div class="card">
       <div class="container">
         <h1 class="banner">CORSO FRONTEND DEVELOPER</h1>
-        <label for="input-time">Inserisci l'ora attuale (HH:MM):</label>
-        <input
+        <label for="">Durata della pausa:</label>
+        <!-- <input
           class="text-input"
           type="text"
           id="input-time"
           placeholder="Es. 12:00"
-        />
+        /> -->
+        <select name="select-break-length" id="select-break-length">
+          <option value="15">15 Minuti</option>
+          <option value="20">20 Minuti</option>
+          <option value="25">25 Minuti</option>
+          <option value="30">30 Minuti</option>
+        </select>
 
         <button class="button" onclick="calculateTime()">VAI</button>
 
@@ -29,7 +35,7 @@
 
     <footer class="footer-container">
       <div class="copyright-container">
-        <p class="copyright">&#169 2023 - ChatGPT - <a href="https://andreawebdev.netlify.app/" target="_blank">Andrea Marchese</a></p>
+        <p class="copyright">&#169 2023 - <a href="https://andreawebdev.netlify.app/" target="_blank">Andrea Marchese</a> · <a href="https://github.com/ninopulvi90" target="_blank">Antonino "NinoResin" Pulvirenti</a> - Version 1.1</p>
       </div>
     </footer>
 
