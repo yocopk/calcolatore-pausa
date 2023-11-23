@@ -20,9 +20,9 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: linear-gradient(-45deg, #e43d00, #f88400, rgb(255, 187, 61), #ffe900);
+  background: linear-gradient(-45deg, #FFBB5C, #FF9B50, #E25E3E, #C63D2F);
   background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+  animation: gradient 15s ease infinite;
 }
 
 .img-container{
