@@ -21,7 +21,34 @@ body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 25s ease infinite;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.img-container img{
+  width: 150px;
+}
+
+.pr{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 5px;
+}
+
+.right{
+  color: rgb(238, 168, 39);
+}
+
+.img-container div{
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
@@ -33,6 +60,10 @@ body {
 
 .container {
   text-align: center;
+}
+
+.container label{
+  font-size: 17px;
 }
 
 input {
@@ -77,8 +108,31 @@ h3 {
 }
 
 #select-break-length {
-  margin: 0 16px;
+  margin: 0 14px;
   padding: 4px 8px;
+  font-size: 16px;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(204, 204, 204);
+}
+
+#select-break-length:hover{
+  /* background-color: rgb(255, 230, 183); */
+  background-color: rgb(245, 244, 244);
+}
+
+#select-break-length option:hover{
+  background-color: white;
+}
+
+#select-break-length:focus{
+  outline: none;
+}
+
+#select-break-length option{
+  outline: none;
+  border-color: rgb(204, 204, 204);
 }
 
 .text-input:hover {
@@ -89,6 +143,7 @@ h3 {
   border: 1px solid rgb(230, 168, 52);
   box-shadow: 0 0 5px 0 rgba(230, 168, 52, 0.5);
   outline: none;
+  border-bottom-right-radius: 0;
 }
 
 .copyright-container {
