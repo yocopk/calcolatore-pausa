@@ -204,7 +204,8 @@ h3 {
 }
 
 .copyright {
-  font-size: 10px;
+  font-size: 9px;
+  font-weight: 700;
 }
 
 a {
@@ -242,14 +243,15 @@ a {
 }
 
 .reset-btn {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  bottom: 50px;
-  transition: visibility 0.3s ease; /* Aggiunge una transizione per una transizione più fluida */
+  top:0;
+  left: 0;
+  transition: opacity 0.3s ease; /* Aggiunge una transizione per una transizione più fluida */
 }
 
 .reset-btn:hover {
-  visibility: visible;
+  opacity: 1;
 }
 
 @keyframes gradient {
