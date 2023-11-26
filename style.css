@@ -20,7 +20,7 @@ body {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: linear-gradient(-45deg, #FFBB5C, #FF9B50, #E25E3E, #C63D2F);
+  background: linear-gradient(-45deg, #FFBB5C, #FF9B50, #f86e4b, #f8731a);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -53,7 +53,9 @@ body {
 }
 
 .card {
-  background-color: white;
+  min-width: 650px;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -86,6 +88,45 @@ button:hover {
   background-color: rgb(247, 198, 107);
 }
 
+.banner-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bxs-edit-alt{
+  background-color: rgb(230, 168, 52);
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+.edit-input{
+  font-size: 24px;
+  width: 500px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.edit-input:hover{
+  border: 1px solid rgb(230, 168, 52);
+}
+
+.edit-input:focus{
+  border: 1px solid rgb(230, 168, 52);
+  box-shadow: 0 0 5px 0 rgba(230, 168, 52, 0.5);
+  outline: none;
+}
+
+.save-button{
+  margin-bottom: 10px;
+}
+
 h1 {
   font-size: 24px;
   margin-top: 50px;
@@ -101,6 +142,17 @@ h1 {
 h3 {
   padding-top: 50px;
   font-size: 18px;
+}
+
+.course-code-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-code{
+  font-size: 16px;
+  letter-spacing: 0px;
 }
 
 .text-input {
@@ -159,10 +211,45 @@ a {
   color: black;
 }
 
-span {
+.hours-text {
   letter-spacing: 5px;
   margin-left: 15px;
   font-size: 40px;
+}
+
+.course-code{
+  font-size: 20px;
+}
+
+.course-code-container input{
+  width: 250px;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  margin-left: 10px;
+}
+
+.course-code-container button{
+  margin-left: 10px;
+  position: relative;
+  top: 20px;
+}
+
+.course-code-container .edit-title{
+  position: relative;
+  margin-left: 10px;
+  top: 16px;
+}
+
+.reset-btn {
+  visibility: hidden;
+  position: absolute;
+  bottom: 50px;
+  transition: visibility 0.3s ease; /* Aggiunge una transizione per una transizione più fluida */
+}
+
+.reset-btn:hover {
+  visibility: visible;
 }
 
 @keyframes gradient {

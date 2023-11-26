@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcolatore Pausa</title>
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <div class="card">
@@ -17,7 +18,15 @@
           </div>
           
         </div>
-        <h1 class="banner">CORSO FRONTEND DEVELOPER</h1>
+        <div class="banner-container">
+          <h1 class="banner">CORSO FRONTEND DEVELOPER</h1>
+          <a href="#" class="edit-title" onclick="enableEdit()">
+            <i class='bx bxs-edit-alt'></i>
+          </a>
+          <input type="text" id="editInput" class="edit-input" style="display:none;">
+          <button id="saveButton" class="save-button" onclick="saveEdit()" style="display:none;">Salva</button>
+        </div>
+        
         <label for="">Durata della pausa:</label>
         <!-- <input
           class="text-input"
@@ -34,18 +43,29 @@
 
         <button class="button" onclick="calculateTime()">VAI</button>
 
-        <h1>Inizio pausa: <span id="display-input-time">--:--</span></h1>
-        <h1>Fine pausa: <span id="display-future-time">--:--</span></h1>
+        <h1>Inizio pausa: <span class="hours-text"  id="display-input-time">--:--</span></h1>
+        <h1>Fine pausa: <span class="hours-text" id="display-future-time">--:--</span></h1>
 
-        <h3>Codice corso: 002PROTD2370317</h3>
+      
+        <div class="course-code-container">
+          <h3>Codice corso: <span class="course-code" id="courseCode">002PROTD2370317</span></h3>
+          <a href="#" class="edit-title" onclick="enableEditCode('courseCode', 'editCodeInput2', 'saveCodeButton')">
+            <i class='bx bxs-edit-alt'></i>
+          </a>
+          <input type="text" id="editCodeInput2" class="edit-input" style="display:none;">
+          <button id="saveCodeButton" class="save-button" onclick="saveEditCode('courseCode', 'editCodeInput2', 'saveCodeButton')" style="display:none;">Salva</button>
+        </div>
+
       </div>
     </div>
 
     <footer class="footer-container">
       <div class="copyright-container">
-        <p class="copyright">&#169 2023 - <a href="https://andreawebdev.netlify.app/" target="_blank">Andrea Marchese</a> · <a href="https://github.com/ninopulvi90" target="_blank">Antonino Pulvirenti</a> - Version 1.1</p>
+        <p class="copyright">&#169 2023 - <a href="https://andreawebdev.netlify.app/" target="_blank">Andrea Marchese</a>. Tutti i diritti riservati. Contenuto in collaborazione con <a href="https://github.com/ninopulvi90" target="_blank">Antonino Pulvirenti</a> - Version 1.1</p>
       </div>
     </footer>
+
+    <button class="reset-btn" onclick="resetDefault()">Resetta Default</button>
 
     <script src="script.js"></script>
   </body>
