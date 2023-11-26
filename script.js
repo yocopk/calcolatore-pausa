@@ -1,6 +1,7 @@
 function calculateTime() {
-  const breakLength = document.getElementById("select-break-length").value;
-
+  const breakLength = sanitize(
+    document.getElementById("select-break-length").value
+  );
   const currentTime = new Date();
 
   // Non vogliamo farci rubare circa mezzo minuto dalla pausa
@@ -10,7 +11,7 @@ function calculateTime() {
     currentTime.setSeconds(currentTime.getSeconds() + secondsToRoundUp);
   }
   const futureTime = new Date(currentTime);
-  futureTime.setMinutes(futureTime.getMinutes() + parseInt(breakLength));
+  futureTime.setMinutes(futureTime.getMinutes() + breakLength);
 
   const options = { hour: "numeric", minute: "numeric" };
 
@@ -18,6 +19,14 @@ function calculateTime() {
     currentTime.toLocaleTimeString("it-IT", options);
   document.getElementById("display-future-time").textContent =
     futureTime.toLocaleTimeString("it-IT", options);
+
+  function sanitize(code) {
+    if(code >= 15 && code <= 30 && code % 5 == 0) {
+      return parseInt(code);
+    }
+    alert("Non fare il furbo!");
+    return 45;
+  }
 }
 
 // FUNZIONE EDITING DEL TITOLO
