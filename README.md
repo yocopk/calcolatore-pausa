@@ -7,16 +7,16 @@ Il progetto Pause Break mira a semplificare la gestione delle pause nei corsi on
 ## Funzionalità Chiave
 
 -   **Configurazione Semplice**: Gli utenti possono facilmente impostare la durata della pausa desiderata.
-- 
+
 -   **Calcolo Automatico dell'Orario**: Il programma acquisisce automaticamente l'orario attuale dal sistema e somma la durata della pausa, semplificando il processo di gestione del tempo.
-- 
+
 -   **Modifica del Codice e del Titolo**: L'applicazione presenta la possibilità di modificare il Titolo ed il Codice corso, tramite una piccola icona.
 
 ## Come Usare
 
-**Esecuzione del Programma**: Avvia il programma e lascia che gestisca automaticamente l'aggiunta della pausa all'orario corrente.
+- **Esecuzione del Programma**: Avvia il programma e lascia che gestisca automaticamente l'aggiunta della pausa all'orario corrente.
 
-**Modifica del Titolo e del Codice del Corso**: Personalizza il titolo del progetto e inserisci il codice del corso per adattarlo alle tue esigenze.
+- **Modifica del Titolo e del Codice del Corso**: Personalizza il titolo del progetto e inserisci il codice del corso per adattarlo alle tue esigenze.
 
 ## Contribuisci
 
