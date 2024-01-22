@@ -265,3 +265,32 @@ a {
     background-position: 0% 50%;
   }
 }
+
+/* Media query per dispositivi cellulari */
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: 100% 100%;
+  }
+
+  .card {
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .edit-input {
+    width: 100%;
+  }
+
+  .course-code-container input,
+  .course-code-container button,
+  .course-code-container .edit-title {
+    width: 100%;
+    margin: 10px 0;
+    top: 0;
+  }
+
+  .reset-btn {
+    opacity: 1;
+  }
+}
+
